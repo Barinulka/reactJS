@@ -1,14 +1,42 @@
 import './App.scss';
-import Message from './Message/Message';
+import React, {useState, useEffect} from 'react';
+// import Message from './Message/Message';
 
-const message = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum veniam ipsa dolores cumque error at adipisci, ipsam dolorum voluptatem magni!';
+export const App = () => {
+    console.log('render');
 
-function App() {
-  return (
-    <div className="App center">
-      <Message text={message} title="Lorem title" />
-    </div>
-  );
+    const [count, setCount] = useState(0);
+
+    const updateCount = () => {
+        setCount(count + 1);
+    }
+
+    useEffect(() => {
+        console.log("did mount");
+    }, []);
+
+
+
+    return (
+        <div className="App center">
+            <span className="counter">{count}</span>
+            <Child number={count} />
+            <Button onClick={updateCount} />
+
+        </div>
+    );
+}
+
+function Button(props) {
+    return (
+        <div className="counter-button" onClick={props.onClick}>Click!</div>
+    );
+}
+
+function Child(props) {
+    return (
+        <span>{props.count}</span>
+    );
 }
 
 
