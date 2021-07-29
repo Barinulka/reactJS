@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Form.scss';
 
 export const Form = ({ onSendMessage }) => {
     const [author, setAuthor] = useState('');
@@ -16,18 +17,18 @@ export const Form = ({ onSendMessage }) => {
         e.preventDefault();
         onSendMessage({
             author: author,
-            id: Date.now(),
             message: message,
+            id: Date.now()
         });
         setAuthor('');
         setMessage('');
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={author} onChange={authorChange} />
-            <input type="text" value={message} onChange={messageChange} />
-            <input type="submit" />
+        <form onSubmit={handleSubmit} className="form">
+            <input type="text" value={author} onChange={authorChange} placeholder="Имя" className="form__input" />
+            <textarea name="message" rows="5"  value={message} onChange={messageChange} placeholder="Сообщение" className="form__text" />
+            <input type="submit" className="form__submit" />
         </form>
     )
 }
