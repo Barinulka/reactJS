@@ -2,5 +2,8 @@
     margin: 0 auto;
     width: 980px;
     text-align: center;
+}
 
+.center {
+    padding: 0 calc(50% - 1140px / 2);
 }
