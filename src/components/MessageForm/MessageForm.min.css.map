@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "MessageForm.min.css",
+	"sources": [
+		"MessageForm.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,KAAK,AAAC,CACF,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CAKzB,AAHI,AAAD,WAAO,CAAG,WAAM,AAAC,CACb,aAAa,CAAE,eAAe,CACjC"
+}

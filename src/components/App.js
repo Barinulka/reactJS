@@ -1,10 +1,11 @@
 import './App.scss';
 import React, { useCallback, useEffect, useState } from 'react';
+import Container from '@material-ui/core/Container';
 import { MessageForm } from './MessageForm/MessageForm';
 import { MessageField } from './MessageField/MessageField';
 
 export const App = () => {
-  
+
   const [messages, setMessages] = useState([]);
 
   const handleSendMessages = useCallback((newMessage) => {
@@ -25,16 +26,15 @@ export const App = () => {
   }
 
   return (
-    <div className="App center">
+    <Container fixed>
       <div>
         <MessageForm onSendMessages={handleSendMessages}/>
-       
       </div>
-      
+
       <div>
         <MessageField messages={messages} />
       </div>
-    </div>
+    </Container>
   );
 }
 

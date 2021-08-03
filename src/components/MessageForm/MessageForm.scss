@@ -1,0 +1,8 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    &__name, &__mess {
+        margin-bottom: 15px !important;
+    }
+}

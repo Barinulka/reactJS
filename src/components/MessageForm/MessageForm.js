@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { TextField } from '@material-ui/core';
+import './MessageForm.scss';
 
 export const MessageForm = ({ onSendMessages }) => {
     const [name, setName] = useState('');
@@ -23,9 +25,9 @@ export const MessageForm = ({ onSendMessages }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Name" value={ name } onChange={ handleChangeName } />
-            <input type="text" placeholder="Text" value={ text } onChange={ handleChangeText } />
+        <form className="form" onSubmit={handleSubmit}>
+            <TextField className="form__name" id="standard-basic" label="Name" value={ name } onChange={ handleChangeName } />
+            <TextField className="form__mess" id="standard-basic" label="Message" variant="outlined" value={ text } onChange={ handleChangeText } />
             <input type="submit" />
         </form>
     )
