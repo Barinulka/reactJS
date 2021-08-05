@@ -27,12 +27,14 @@ export const App = () => {
 
   return (
     <Container fixed>
-      <div>
-        <MessageForm onSendMessages={handleSendMessages}/>
-      </div>
+      <div className="App" >
+        <div className="message-field">
+          <MessageField messages={messages} />
+        </div>
 
-      <div>
-        <MessageField messages={messages} />
+        <div className="form-field">
+          <MessageForm onSendMessages={handleSendMessages}/>
+        </div>
       </div>
     </Container>
   );

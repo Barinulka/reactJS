@@ -1,20 +1,33 @@
-.mes {
-    margin-top: 50px;
-}
-
-.message {
+.mess {
     padding: 10px;
     margin: 0;
+    background: #fef7d2;
+    border: 1px solid #fbe7e7;
+    margin: 5px 0;
+    border-radius: 5px;
+    width: 35%;
+    float: right;
+    clear: both;
 
-    &__title {
-        font-size: 20px;
-        font-weight: normal;
+    &__name {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 15px;
+        margin-bottom: 10px;
     }
 
     &__text {
         font-size: 16px;
         line-height: 20px;
     }
+}
+
+.mess-robo {
+    float: left;
+    clear: both;
+    background: #dcdcdc;
+    border: 1px solid #b98080;
 }
 
 .message:hover {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField } from '@material-ui/core';
+import { TextField, Button } from '@material-ui/core';
 import './MessageForm.scss';
 
 export const MessageForm = ({ onSendMessages }) => {
@@ -17,7 +17,7 @@ export const MessageForm = ({ onSendMessages }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         onSendMessages({
-            name: name,
+            name: 'Me',
             text: text,
             id: Date.now(),
         });
@@ -26,9 +26,8 @@ export const MessageForm = ({ onSendMessages }) => {
 
     return (
         <form className="form" onSubmit={handleSubmit}>
-            <TextField className="form__name" id="standard-basic" label="Name" value={ name } onChange={ handleChangeName } />
-            <TextField className="form__mess" id="standard-basic" label="Message" variant="outlined" value={ text } onChange={ handleChangeText } />
-            <input type="submit" />
+            <TextField className="form__mess"  label="Message" variant="outlined" value={ text } onChange={ handleChangeText } />
+            <Button type="submit" variant="outlined">Отправить</Button>
         </form>
     )
 }

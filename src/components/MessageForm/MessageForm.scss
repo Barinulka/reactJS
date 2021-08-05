@@ -1,8 +1,12 @@
 .form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 
     &__name, &__mess {
-        margin-bottom: 15px !important;
+        margin-right: 15px !important;
+        width: 100%;
     }
 }
