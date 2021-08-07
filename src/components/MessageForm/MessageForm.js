@@ -1,14 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { TextField, Button } from '@material-ui/core';
 import './MessageForm.scss';
 
 export const MessageForm = ({ onSendMessages }) => {
-    const [name, setName] = useState('');
     const [text, setText] = useState('');
-
-    const handleChangeName = (e) => {
-        setName(e.target.value);
-    }
+    const textInput = useRef(null);
 
     const handleChangeText = (e) => {
         setText(e.target.value);
@@ -21,13 +17,23 @@ export const MessageForm = ({ onSendMessages }) => {
             text: text,
             id: Date.now(),
         });
-        setName('');
+        setText('');
     }
+
+    useEffect(() => {
+        textInput.current.focus();
+    }, []);
+
+    function handleClick() {
+        textInput.current.focus();
+    }
+
+  
 
     return (
         <form className="form" onSubmit={handleSubmit}>
-            <TextField className="form__mess"  label="Message" variant="outlined" value={ text } onChange={ handleChangeText } />
-            <Button type="submit" variant="outlined">Отправить</Button>
+            <TextField inputRef={textInput} className="form__mess"  label="Message" variant="outlined" value={ text } onChange={ handleChangeText } />
+            <Button type="submit" variant="outlined" onClick={handleClick} >Отправить</Button>
         </form>
     )
 }

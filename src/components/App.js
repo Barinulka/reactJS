@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Container from '@material-ui/core/Container';
 import { MessageForm } from './MessageForm/MessageForm';
 import { MessageField } from './MessageField/MessageField';
+import { ChatList } from './ChatList/ChatList';
 
 export const App = () => {
 
@@ -27,14 +28,22 @@ export const App = () => {
 
   return (
     <Container fixed>
+      
       <div className="App" >
-        <div className="message-field">
-          <MessageField messages={messages} />
+        
+        <div className="left-field">
+          <ChatList />
         </div>
+        <div className="right-field">
+          <div className="message-field">
+            <MessageField messages={messages} />
+          </div>
 
-        <div className="form-field">
-          <MessageForm onSendMessages={handleSendMessages}/>
+          <div className="form-field">
+            <MessageForm onSendMessages={handleSendMessages}/>
+          </div>
         </div>
+        
       </div>
     </Container>
   );
