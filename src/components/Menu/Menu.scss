@@ -1,0 +1,31 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    &-list {
+        width: unset !important;
+    }
+
+    &-list:hover {
+        cursor: pointer;
+        background: #f9eaea;
+        box-sizing: border-box;
+        border-radius: 5px;
+        transform: scale(1.05);
+    }
+
+    &-list:active {
+        cursor: pointer;
+        background: #f9eaea;
+        box-sizing: border-box;
+        border-radius: 5px;
+        transform: scale(0.99);
+    }
+
+    &-link {
+        text-decoration: none;
+    }
+}

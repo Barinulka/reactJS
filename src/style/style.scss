@@ -10,3 +10,7 @@ body {
 .center {
     padding: 0 calc(50% - 1140px / 2);
 }
+
+div#root {
+    height: 100vh; 
+}
