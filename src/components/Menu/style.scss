@@ -1,0 +1,23 @@
+.menu {
+    &-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &-item {
+        width: unset !important;
+        margin-right: 15px;
+    }
+    &-item:hover{
+        border-bottom: 3px solid #999;
+    }
+    &-item:last-child {
+        margin-right: 0;
+    }
+    &-link {
+        text-decoration: none;
+    }
+}
+.active {
+    border-bottom: 3px solid #999;
+}
