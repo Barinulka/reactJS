@@ -1,0 +1,13 @@
+.chat-block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #f3e07a;
+    border-radius: 10px;
+    height: 85vh;
+    justify-content: space-between;
+}
+
+.message-field {
+    overflow: auto;
+}

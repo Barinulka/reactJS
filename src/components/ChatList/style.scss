@@ -1,0 +1,24 @@
+.chats ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.chats ul > li {
+    width: 75px;
+}
+.chats ul li > a {
+    text-decoration: none;
+}
+
+.chats ul > li:hover {
+    cursor: pointer;
+    // border: 1px solid #f3e07a;
+    background: #f9eaea;
+    border-radius: 5px;
+}
+.chats ul > li:active {
+    cursor: pointer;
+    // border: 1px solid #f3e07a;
+    background: none;
+    border-radius: none;
+}
