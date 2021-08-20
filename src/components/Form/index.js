@@ -19,20 +19,17 @@ export const Form = ({ onSendMessage }) => {
             id: Date.now(),
         });
         setValue('');
+        textInput.current.focus();
     }
 
     useEffect(() => {
         textInput.current.focus();
     }, []);
 
-    function handleClick() {
-        textInput.current.focus();
-    }
-
     return (
         <form className="form" onSubmit={handleSubmit}>
             <TextField inputRef={textInput} className="form__mess"  label="Message" variant="outlined" value={ value } onChange={ handleChangeText } />
-            <Button type="submit" variant="outlined" onClick={handleClick} >Отправить</Button>
+            <Button type="submit" variant="outlined">Отправить</Button>
         </form>
     )
 }

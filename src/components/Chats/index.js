@@ -7,6 +7,7 @@ import { Form } from '../Form';
 import { MessageList } from '../MessageList';
 import { Redirect } from 'react-router-dom';
 import './style.scss';
+import { arrayRandElement } from '../../utils';
 
 export const Chats = ({ chats, setChats }) => {
     const { chatId } = useParams();
@@ -19,11 +20,6 @@ export const Chats = ({ chats, setChats }) => {
             },
         });
     });
-
-    const arrayRandElement = (arr) => {
-        let rand = Math.floor(Math.random() * arr.length);
-        return arr[rand];
-      }
 
     useEffect(() => {
         if (

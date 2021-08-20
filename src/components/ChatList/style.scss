@@ -5,12 +5,15 @@
 }
 .chats ul > li {
     width: 75px;
+    padding: 0;
 }
 .chats ul li > a {
     text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-.chats ul > li:hover {
+.chats ul > li a:hover {
     cursor: pointer;
     // border: 1px solid #f3e07a;
     background: #f9eaea;

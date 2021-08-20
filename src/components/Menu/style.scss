@@ -9,7 +9,7 @@
         margin-right: 15px;
     }
     &-item:hover{
-        border-bottom: 3px solid #999;
+        background: #fea;
     }
     &-item:last-child {
         margin-right: 0;
@@ -19,5 +19,5 @@
     }
 }
 .active {
-    border-bottom: 3px solid #999;
+    background: #fea;
 }
