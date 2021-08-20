@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { AUTHORS } from "../../const";
 import { roboMessArr } from '../../const';
 import { useParams } from "react-router-dom";
@@ -11,8 +11,8 @@ import { arrayRandElement } from '../../utils';
 
 export const Chats = ({ chats, setChats }) => {
     const { chatId } = useParams();
-
-    const handleSendMessage = useCallback((newMessage) => {
+    
+    const handleSendMessage = ((newMessage) => {
         setChats({
             ...chats, [chatId]: {
                 ...chats[chatId],

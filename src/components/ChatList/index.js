@@ -11,7 +11,6 @@ export const ChatList = ({ chats }) => {
 
   const handleClick = (e) => {
     setActive(e.target.pathname);
-    console.log(active)
   }
 
   return (

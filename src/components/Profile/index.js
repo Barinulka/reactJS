@@ -1,28 +1,26 @@
-import React, { useContext } from 'react';
-import { MyNewContext } from '../../context/newContext';
+import { Checkbox } from '@material-ui/core';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { PROFILE_SHOW_NAME } from '../../store/action';
 
 export const Profile = () => {
 
-    const contextValue = useContext(MyNewContext);
+  const toggleName = useSelector((state) => state);
+  const dispatch = useDispatch();
 
-    
+  const setShowName = () => {
+    dispatch({
+      type: PROFILE_SHOW_NAME,
+    });
+  }
+  console.log(toggleName);
 
-    function withLogger(fn) {
-        return function(...args) {
-          console.log(args);
-          return fn(...args);
-        }
-      }
-      
-      const foo = (a, b) => a + b;
-      const bar = withLogger(foo);
-      
-      console.log(bar(1, 2));
-
-    return (
-        <>
-            <h2>Страница профиля</h2>
-            <span>{contextValue.mess}</span>
-        </>
-    );
+  return (
+      <>
+        <h2>Страница профиля</h2>
+        <span >Показать/скрыть имя</span>
+        <Checkbox onChange={setShowName} ></Checkbox>
+        {toggleName.showName && <span>{ toggleName.name }</span>}
+      </>
+  );
 }
