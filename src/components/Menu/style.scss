@@ -1,0 +1,23 @@
+.menu {
+    &-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &-item {
+        width: unset !important;
+        margin-right: 15px;
+    }
+    &-item:hover{
+        background: #fea;
+    }
+    &-item:last-child {
+        margin-right: 0;
+    }
+    &-link {
+        text-decoration: none;
+    }
+}
+.active {
+    background: #fea;
+}
